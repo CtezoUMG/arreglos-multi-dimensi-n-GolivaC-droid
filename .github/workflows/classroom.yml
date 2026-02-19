@@ -22,7 +22,7 @@ jobs:
       with:
         test-name: "Valor Maximo Estandar"
         setup-command: "dotnet build"
-        command: "dotnet run"
+        command: "dotnet build -c Release && /usr/bin/time -v ./bin/Release/net10.0/TestArreglo"
         input: "5\n10 20 5 8 15"
         expected-output: "20"
         comparison-method: contains
@@ -35,7 +35,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: "Maximo con Negativos"
-        command: "dotnet run"
+        command: "dotnet build -c Release && /usr/bin/time -v ./bin/Release/net10.0/TestArreglo"
         input: "3\n-10 -5 -30"
         expected-output: "-5"
         comparison-method: contains
@@ -48,7 +48,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: "Arreglo de un elemento"
-        command: "dotnet run"
+        command: "dotnet build -c Release && /usr/bin/time -v ./bin/Release/net10.0/TestArreglo"
         input: "1\n99"
         expected-output: "99"
         comparison-method: contains
