@@ -19,7 +19,7 @@ for (int i = 0; i < n; i++)
 int maximo = numeros[0]; 
 
 // TODO: Implementar el algoritmo de búsqueda aquí
-for (int i = 1; i < numeros.Length; i++)
+for (int i = 1; i < n; i++)
 {
     if (numeros[i] > maximo)
     {
